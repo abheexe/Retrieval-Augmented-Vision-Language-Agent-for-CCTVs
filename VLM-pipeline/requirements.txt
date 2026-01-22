@@ -1,0 +1,17 @@
+streamlit==1.36.0
+torch
+torchvision
+torchaudio
+transformers==4.44.0
+pillow
+nltk
+evaluate
+rouge-score
+accelerate
+ultralytics
+numpy
+glob2
+
+#download sepeartely
+# pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
+# pip install -r requirements.txt
