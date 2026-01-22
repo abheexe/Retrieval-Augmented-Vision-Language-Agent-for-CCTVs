@@ -24,7 +24,7 @@ h2, h3 {
   height: auto;
   overflow-y: auto;
   background-color: #f8fafc;
-  padding: 10px;
+  padding: 0px;
   box-sizing: border-box;
 }
 
@@ -33,7 +33,7 @@ h2, h3 {
   width: 100vw;
   display: flex;
   flex-direction: column;
-  padding: 20px;
+  padding: 10px;
   box-sizing: border-box;
 }
 
