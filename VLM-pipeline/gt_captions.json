@@ -1,0 +1,37 @@
+{
+  "frame001.png": ["Empty room no activity"],
+  "frame002.png": ["Person enters room"], 
+  "frame003.png": ["Person bends to pick notebook"],
+  "frame004.png": ["Person picks and opens notebook"],
+  "frame005.png": ["Person reads notebook"],
+  "frame006.png": ["Person places notebook"],
+  "frame007.png": ["Person leaves room"],
+  
+  "frame008.png": ["Person turns back before leaving"],
+  "frame009.png": ["Person picks up notebook"],
+  "frame010.png": ["Person tosses notebook on bed"],
+  "frame011.png": ["Person tosses notebook on bed"],
+  "frame012.png": ["Person leaves room"],
+  
+  "frame013.png": ["Empty room person left"],
+  "frame014.png": ["Empty room no activity"],
+  "frame015.png": ["Person enters room"],
+  "frame016.png": ["Person picks notebook from bed"],
+  "frame017.png": ["Person reads notebook"],
+  "frame018.png": ["Person reads notebook"],
+  
+  "frame019.png": ["Person closes notebook walks to other bed"],
+  "frame020.png": ["Person walks toward other bed"],
+  "frame021.png": ["Person places notebook on second bed"],
+  "frame022.png": ["Person places notebook on second bed"],
+  "frame023.png": ["Person leaves room"],
+  
+  "frame024.png": ["Person left room empty"],
+  "frame025.png": ["Person enters room"],
+  "frame026.png": ["Person picks notebook from second bed"],
+  "frame027.png": ["Person places notebook original location"],
+  "frame028.png": ["Person places notebook original location"],
+  "frame029.png": ["Person leaves room"],
+  "frame030.png": ["Empty room person left"],
+  "frame031.png": ["Empty room no activity"]
+}

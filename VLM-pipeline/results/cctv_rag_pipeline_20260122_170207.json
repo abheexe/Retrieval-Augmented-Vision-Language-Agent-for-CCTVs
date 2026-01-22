@@ -1,0 +1,867 @@
+{
+  "project": "APSIT BE CCTV RAG Agent 2025-26",
+  "pipeline": "YOLOv8+DeepSORT \u2192 SlidingWindow(3,2) \u2192 VLM \u2192 ChromaDB",
+  "model": "CCTV-RAG-v1.0",
+  "timestamp": "20260122_170207",
+  "stats": {
+    "total_frames": 33,
+    "chunks_processed": 16,
+    "avg_bleu": 0.001938968462257839,
+    "vlm_calls": 16,
+    "triggers_used": [
+      "periodic",
+      "new_track",
+      "activity_change"
+    ]
+  },
+  "events": [
+    {
+      "chunk_id": "chunk_00",
+      "summary": "Person47 walked purposefully from position [100, 200] to [240, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_000",
+        "timestamp_start": "10:30:15",
+        "timestamp_end": "10:30:21",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [100, 200] to [240, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "new_track",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 new_track server room 10:30:15 walked toward door"
+      },
+      "bleu": 0.0035548168188028837,
+      "latency": 0.05,
+      "gt": "Empty room no activity",
+      "trigger": "new_track",
+      "positions": [
+        [
+          100,
+          200,
+          80,
+          180
+        ],
+        [
+          170,
+          200,
+          80,
+          180
+        ],
+        [
+          240,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_01",
+      "summary": "Person47 walked purposefully from position [150, 200] to [290, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_001",
+        "timestamp_start": "10:30:17",
+        "timestamp_end": "10:30:23",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [150, 200] to [290, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:17 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person bends to pick notebook",
+      "trigger": "periodic",
+      "positions": [
+        [
+          150,
+          200,
+          80,
+          180
+        ],
+        [
+          220,
+          200,
+          80,
+          180
+        ],
+        [
+          290,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_02",
+      "summary": "Person47 walked purposefully from position [200, 200] to [340, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_002",
+        "timestamp_start": "10:30:19",
+        "timestamp_end": "10:30:25",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [200, 200] to [340, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:19 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person reads notebook",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          200,
+          200,
+          80,
+          180
+        ],
+        [
+          270,
+          200,
+          80,
+          180
+        ],
+        [
+          340,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_03",
+      "summary": "Person47 walked purposefully from position [250, 200] to [390, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_003",
+        "timestamp_start": "10:30:21",
+        "timestamp_end": "10:30:27",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [250, 200] to [390, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:21 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person leaves room",
+      "trigger": "periodic",
+      "positions": [
+        [
+          250,
+          200,
+          80,
+          180
+        ],
+        [
+          320,
+          200,
+          80,
+          180
+        ],
+        [
+          390,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_04",
+      "summary": "Person47 walked purposefully from position [300, 200] to [440, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_004",
+        "timestamp_start": "10:30:23",
+        "timestamp_end": "10:30:29",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [300, 200] to [440, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:23 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person picks up notebook",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          300,
+          200,
+          80,
+          180
+        ],
+        [
+          370,
+          200,
+          80,
+          180
+        ],
+        [
+          440,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_05",
+      "summary": "Person47 walked purposefully from position [350, 200] to [490, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_005",
+        "timestamp_start": "10:30:25",
+        "timestamp_end": "10:30:31",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [350, 200] to [490, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:25 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person tosses notebook on bed",
+      "trigger": "periodic",
+      "positions": [
+        [
+          350,
+          200,
+          80,
+          180
+        ],
+        [
+          420,
+          200,
+          80,
+          180
+        ],
+        [
+          490,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_06",
+      "summary": "Person47 walked purposefully from position [400, 200] to [540, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_006",
+        "timestamp_start": "10:30:27",
+        "timestamp_end": "10:30:33",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [400, 200] to [540, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:27 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Empty room person left",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          400,
+          200,
+          80,
+          180
+        ],
+        [
+          470,
+          200,
+          80,
+          180
+        ],
+        [
+          540,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_07",
+      "summary": "Person47 walked purposefully from position [450, 200] to [590, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_007",
+        "timestamp_start": "10:30:29",
+        "timestamp_end": "10:30:35",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [450, 200] to [590, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:29 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person enters room",
+      "trigger": "periodic",
+      "positions": [
+        [
+          450,
+          200,
+          80,
+          180
+        ],
+        [
+          520,
+          200,
+          80,
+          180
+        ],
+        [
+          590,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_08",
+      "summary": "Person47 walked purposefully from position [500, 200] to [640, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_008",
+        "timestamp_start": "10:30:31",
+        "timestamp_end": "10:30:37",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [500, 200] to [640, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:31 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person reads notebook",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          500,
+          200,
+          80,
+          180
+        ],
+        [
+          570,
+          200,
+          80,
+          180
+        ],
+        [
+          640,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_09",
+      "summary": "Person47 walked purposefully from position [550, 200] to [690, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_009",
+        "timestamp_start": "10:30:33",
+        "timestamp_end": "10:30:39",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [550, 200] to [690, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:33 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person closes notebook walks to other bed",
+      "trigger": "periodic",
+      "positions": [
+        [
+          550,
+          200,
+          80,
+          180
+        ],
+        [
+          620,
+          200,
+          80,
+          180
+        ],
+        [
+          690,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_10",
+      "summary": "Person47 walked purposefully from position [600, 200] to [740, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_010",
+        "timestamp_start": "10:30:35",
+        "timestamp_end": "10:30:41",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [600, 200] to [740, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:35 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person places notebook on second bed",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          600,
+          200,
+          80,
+          180
+        ],
+        [
+          670,
+          200,
+          80,
+          180
+        ],
+        [
+          740,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_11",
+      "summary": "Person47 walked purposefully from position [650, 200] to [790, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_011",
+        "timestamp_start": "10:30:37",
+        "timestamp_end": "10:30:43",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [650, 200] to [790, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:37 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person leaves room",
+      "trigger": "periodic",
+      "positions": [
+        [
+          650,
+          200,
+          80,
+          180
+        ],
+        [
+          720,
+          200,
+          80,
+          180
+        ],
+        [
+          790,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_12",
+      "summary": "Person47 walked purposefully from position [700, 200] to [840, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_012",
+        "timestamp_start": "10:30:39",
+        "timestamp_end": "10:30:45",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [700, 200] to [840, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:39 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person enters room",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          700,
+          200,
+          80,
+          180
+        ],
+        [
+          770,
+          200,
+          80,
+          180
+        ],
+        [
+          840,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_13",
+      "summary": "Person47 walked purposefully from position [750, 200] to [890, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_013",
+        "timestamp_start": "10:30:41",
+        "timestamp_end": "10:30:47",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [750, 200] to [890, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:41 walked toward door"
+      },
+      "bleu": 0.0,
+      "latency": 0.05,
+      "gt": "Person places notebook original location",
+      "trigger": "periodic",
+      "positions": [
+        [
+          750,
+          200,
+          80,
+          180
+        ],
+        [
+          820,
+          200,
+          80,
+          180
+        ],
+        [
+          890,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_14",
+      "summary": "Person47 walked purposefully from position [800, 200] to [940, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_014",
+        "timestamp_start": "10:30:43",
+        "timestamp_end": "10:30:49",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [800, 200] to [940, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "activity_change",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 activity_change server room 10:30:43 walked toward door"
+      },
+      "bleu": 0.002989232719814957,
+      "latency": 0.05,
+      "gt": "Person leaves room",
+      "trigger": "activity_change",
+      "positions": [
+        [
+          800,
+          200,
+          80,
+          180
+        ],
+        [
+          870,
+          200,
+          80,
+          180
+        ],
+        [
+          940,
+          200,
+          80,
+          180
+        ]
+      ]
+    },
+    {
+      "chunk_id": "chunk_15",
+      "summary": "Person47 walked purposefully from position [850, 200] to [990, 200] in server room",
+      "json": {
+        "track_id": "person_47",
+        "event_id": "evt_015",
+        "timestamp_start": "10:30:45",
+        "timestamp_end": "10:30:51",
+        "duration_s": 9,
+        "activity": "walked toward door",
+        "direction": "left_to_right",
+        "speed_mps": 0.3,
+        "confidence": 0.92,
+        "objects": [
+          "server rack",
+          "door",
+          "chair"
+        ],
+        "scene": "server_room",
+        "natural_summary": "Person47 walked purposefully from position [850, 200] to [990, 200] in server room",
+        "search_tags": [
+          "person_movement",
+          "server_room",
+          "periodic",
+          "trajectory"
+        ],
+        "embedding_text": "Person47 periodic server room 10:30:45 walked toward door"
+      },
+      "bleu": 0.0035548168188028837,
+      "latency": 0.05,
+      "gt": "Empty room no activity",
+      "trigger": "periodic",
+      "positions": [
+        [
+          850,
+          200,
+          80,
+          180
+        ],
+        [
+          920,
+          200,
+          80,
+          180
+        ],
+        [
+          990,
+          200,
+          80,
+          180
+        ]
+      ]
+    }
+  ]
+}

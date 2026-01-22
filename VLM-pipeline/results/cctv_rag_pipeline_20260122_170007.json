@@ -1,0 +1,11 @@
+{
+  "project": "APSIT BE CCTV RAG Agent 2025-26",
+  "pipeline": "YOLOv8+DeepSORT \u2192 SlidingWindow(3,2) \u2192 VLM \u2192 ChromaDB",
+  "model": "CCTV-RAG-v1.0",
+  "timestamp": "20260122_170007",
+  "stats": {
+    "total_frames": 33,
+    "chunks_processed": 16,
+    "avg_bleu": 0.001938968462257839,
+    "vlm_calls": 16,
+    "triggers_used": 
