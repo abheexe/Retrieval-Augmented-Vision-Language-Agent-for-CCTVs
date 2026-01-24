@@ -4,7 +4,7 @@ export default function Sidebar() {
       <h3>Flags / Live Warnings</h3>
       <ul className="warning-list">
         <li>⚠️ Motion detected: Entrance</li>
-        <li>⚠️ Person identified: Zone A</li>
+        {/* <li>⚠️ Person identified: Zone A</li> */}
       </ul>
     </div>
   );
